@@ -7,8 +7,8 @@ numberOne = input("Enter first polar number: ").strip()
 numberTwo = input("Enter second polar number: ").strip()
 
 convertedOne = convert(numberOne, convertType)
-convertedTwo = convert(numberOne, convertType)
+convertedTwo = convert(numberTwo, convertType)
 
-
-print()
+finalNum = operate(convertedOne, convertedTwo, convertType, operationType)
+print(finalNum)
 
