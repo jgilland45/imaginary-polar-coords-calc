@@ -3,7 +3,12 @@ from math import *
 def convert(line):
     if '<' in line:
         newLineList = line.split('<')
-        newLine = "".join(newLineList)
+        real = float(newLineList[0]) * cos(radians(float(newLineList[1])))
+        imaginary = float(newLineList[0]) * sin(radians(float(newLineList[1])))
+        if imaginary>=0:
+            newLine = str(real) + '+' + str(imaginary)
+        else:
+            newLine = str(real) + '-' + str(abs(imaginary))
     elif '+' in line or '-' in line:
         if '+' in line:
             newLineList = line.split('+')
